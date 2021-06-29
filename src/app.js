@@ -1,19 +1,20 @@
+"use strict";
+
 const express = require("express");
 const app = express();
+
+const PORT = 3000;
+
+// Routing
+const home = require("./routes/home")
 
 // App Setting
 app.set("views", "./views");
 app.set("view engine", "ejs");
- 
-// Render HTML
-app.get("/", (req, res) => {
-    res.render("home/index");
-});
-app.get("/login", (req, res) => {
-    res.render("home/login")
-});
+
+app.use("/", home); // Middleware Config
 
 // Server 
-app.listen(3000, function() {
+app.listen(PORT, function() {
     console.log("Server Start");
 });
