@@ -1,12 +1,16 @@
 const express = require("express");
 const app = express();
 
+// App Setting
+app.set("views", "./views");
+app.set("view engine", "ejs");
+ 
+// Render HTML
 app.get("/", (req, res) => {
-    res.send("This is Root");
+    res.render("home/index");
 });
-
 app.get("/login", (req, res) => {
-    res.send("This is Login Page");
+    res.render("home/login")
 });
 
 // Server 
