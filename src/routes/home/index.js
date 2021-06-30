@@ -3,13 +3,11 @@
 const express = require("express");
 const router = express.Router();
 
+const ctrl = require("./home.ctrl")
+
 // Render HTML
-router.get("/", (req, res) => {
-    res.render("home/index");
-});
-router.get("/login", (req, res) => {
-    res.render("home/login")
-});
+router.get("/", ctrl.hello);
+router.get("/login", ctrl.login);
 
 // Module Exports 
 module.exports = router;
