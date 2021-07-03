@@ -1,5 +1,6 @@
 "use strict"
 
+const { response } = require("express");
 // const UserStorage = require("../../models/UserStorage");
 const User = require("../../models/User");
 // Modularity
@@ -8,7 +9,10 @@ const output = {
         res.render("home/index");
     },
     login: (req, res) => {
-        res.render("home/login")
+        res.render("home/login");
+    },
+    register: (req, res) => {
+        res.render("home/register");
     },
 };
 
