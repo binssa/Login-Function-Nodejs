@@ -9,10 +9,10 @@ class User{
         this.body = body;
     }
 
-    login(){
+    async login(){
         const client = this.body;
-        // const {id, pw} = UserStorage.getUsers("id", "pw");
-        const {id, pw} = UserStorage.getUserInfo(client.id);
+        const { id, pw } = await UserStorage.getUserInfo(client.id);
+
         if(id){
             if (id === client.id && pw === client.pw){
                 return {success: true};
@@ -20,7 +20,6 @@ class User{
             return {success: false, msg: "비밀번호가 틀렸습니다."};
         }
         return {success: false, msg:"존재하지 않는 ID입니다. "};
-        //console.log(id, pw);
     }
 
     register(){
