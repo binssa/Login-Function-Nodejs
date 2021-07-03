@@ -22,8 +22,7 @@ function register(){
         name : name.value,
         pw : pw.value,
     };
-    
-    // console.log(req);
+
     fetch("/register", {
         method: "POST",
         headers: {
