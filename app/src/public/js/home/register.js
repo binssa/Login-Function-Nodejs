@@ -14,7 +14,7 @@ function register(){
     if (!id.value){
         return alert("ID를 입력해주세요.");
     }
-    if (pw !== confirmPw){
+    if (pw.value !== confirmPw.value){
         return alert("비밀번호가 일치하지 않습니다.");
     }
     const req = {
@@ -32,6 +32,7 @@ function register(){
     })
     .then((res) => res.json())
     .then((res) =>{
+        //console.log(res.success);
         if (res.success){
             location.href = "/login";
         }else{
