@@ -1,7 +1,6 @@
 "use strict"
 
 const { response } = require("express");
-// const UserStorage = require("../../models/UserStorage");
 const User = require("../../models/User");
 // Modularity
 const output = {

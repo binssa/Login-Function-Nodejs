@@ -1,7 +1,5 @@
 "user strict";
 
-console.log("Hello");
-console.log("Bye!");
 //Login Function Implement
 const id = document.querySelector("#id");
 const pw = document.querySelector("#pw");
