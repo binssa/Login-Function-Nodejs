@@ -6,7 +6,6 @@ const router = express.Router();
 const ctrl = require("./home.ctrl")
 
 // Render HTML
-console.log("this is index.js");
 router.get("/", ctrl.output.hello);
 router.get("/login", ctrl.output.login);
 router.get("/register", ctrl.output.register);
